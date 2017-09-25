@@ -13,5 +13,20 @@ export const Words = [
     { id: 11, word: "child", transcript: "[чайлд]", translate: ["ребенок", "", ""] },
     { id: 12, word: "boy", transcript: "[бой]", translate: ["мальчик", "", ""] },
     { id: 13, word: "girl", transcript: "[гё:рл]", translate: ["девочка", "", ""] },
-    { id: 14, word: "guy", transcript: "[гай]", translate: ["парень", "", ""] }
+    { id: 14, word: "guy", transcript: "[гай]", translate: ["парень", "", ""] },
+    { id: 0, word: "friend", transcript: "[фрэнд]", translate: ["друг", "", ""] },
+    { id: 1, word: "acquaintance", transcript: "[экуЭйнтэнс]", translate: ["знакомый", "знакомство", ""] },
+    { id: 2, word: "neighbor", transcript: "[рЭйбэр]", translate: ["сосед", "", ""] },
+    { id: 3, word: "guest", transcript: "[гэст]", translate: ["гость", "", ""] },
+    { id: 4, word: "chief", transcript: "[сэнк ю]", translate: ["шеф", "", ""] },
+    { id: 5, word: "boss", transcript: "[чи:ф]", translate: ["начальник", "босс", "вождь"] },
+    { id: 6, word: "competitor", transcript: "[кэмпЭтитэр]", translate: ["соперник", "конкурент", ""] },
+    { id: 7, word: "client", transcript: "[клАйэнт]", translate: ["клиент", "", ""] },
+    { id: 8, word: "colleague", transcript: "[кОли:г]", translate: ["коллега", "", ""] },
+    { id: 9, word: "family", transcript: "[фЭмили]", translate: ["семья", "", ""] },
+    { id: 10, word: "parents", transcript: "[пЭэрэнтс]", translate: ["родители", "", ""] },
+    { id: 11, word: "father", transcript: "[фА:зер]", translate: ["отец", "", ""] },
+    { id: 12, word: "dad(dy)", transcript: "[дЭд(и)]", translate: ["папа", "", ""] },
+    { id: 13, word: "mother", transcript: "[мА:зэр]", translate: ["мать", "", ""] },
+    { id: 14, word: "mum(my)", transcript: "[мам(и)]", translate: ["мама", "", ""] }
 ];

@@ -11,26 +11,15 @@ html, body {
     background-color:#464646;
   }
   
-  .title {
-      color: black;
-      margin:0;
-      padding:50px 20px;
-  }
-  
-  .text{
-      color: darkslategray;
-      margin: 0;
-      padding:50px 20px;
-  }
-  
-  .button-pos{
-      margin: 20px 0 0 10px;
-      width: 300px;
-  }
-  
   .ground {
     background-color: rgba(57, 31, 22, 0.5);
     height: 100%;
     width: 100%; 
+    padding: 5%;
+    margin-top: 5%;
   }
   
+  .bottom-margin{
+    margin-bottom: 20px;
+    color: coral;
+  }
