@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-12">
+        <div class="container ground">
+            <button class="btn btn-primary btn-lg" (click)="createWord()">Генератор слова</button>
+            <div *ngIf="undefined!==realtime_word">
+                <div class="col-12"><h1><strong>{{realtime_word.word}}</strong></h1></div>
+                <div class="col-12"><h1><strong>{{realtime_word.transcript}}</strong></h1></div>
+            </div>
+            <input type="text" class="col-12" #translate>
+            <button class="btn btn-primary btn-lg" (click)="compareWord(translate.value)">Ввести ответ</button>
+        </div>
+    </div>
+</div>
