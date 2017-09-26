@@ -23,3 +23,15 @@ html, body {
     margin-bottom: 20px;
     color: coral;
   }
+
+  .text-color{
+    color:#2523C9 !important;
+  }
+
+  .right-translate{
+    background-color: rgba(21, 112, 21, 0.7);
+  }
+
+  .bad-translate{
+    background-color: rgba(150, 52, 52, 0.7);
+  }

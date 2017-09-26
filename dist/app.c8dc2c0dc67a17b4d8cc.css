@@ -11,28 +11,28 @@ html, body {
     background-color:#464646;
   }
   
-  .title {
-      color: black;
-      margin:0;
-      padding:50px 20px;
-  }
-  
-  .text{
-      color: darkslategray;
-      margin: 0;
-      padding:50px 20px;
-  }
-  
-  .button-pos{
-      margin: 20px 0 0 10px;
-      width: 300px;
-  }
-  
   .ground {
     background-color: rgba(57, 31, 22, 0.5);
     height: 100%;
     width: 100%; 
+    padding: 5%;
+    margin-top: 5%;
   }
   
+  .bottom-margin{
+    margin-bottom: 20px;
+    color: coral;
+  }
 
-/*# sourceMappingURL=app.81f933463f99a2b29a30.css.map*/
+  .text-color{
+    color:#2523C9 !important;
+  }
+
+  .right-translate{
+    background-color: rgba(21, 112, 21, 0.7);
+  }
+
+  .bad-translate{
+    background-color: rgba(150, 52, 52, 0.7);
+  }
+/*# sourceMappingURL=app.c8dc2c0dc67a17b4d8cc.css.map*/
