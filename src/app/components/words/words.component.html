@@ -1,46 +1,39 @@
-<div class="row">
-    <div class="col-12">
-        <div class="container ground">
-            <div class="row justify-content-center">
-                <button class="col-4 btn btn-primary btn-lg bottom-margin" (click)="createWord()">Генератор слова</button>
-            </div>
-            <div class="row justify-content-center">
-                <div *ngIf="undefined!==realtime_word">
-                    <div class="col-4 bottom-margin"><h3><strong>{{realtime_word.word}}-{{realtime_word.transcript}}</strong></h3></div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <input type="text" style="height:45px" class="col-4 bottom-margin text-color" #translate>
-            </div>
-            <div *ngIf="!right_translate && onswer_clicked">
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 word-text ground">
                 <div class="row justify-content-center">
-                    <div class="col-4 bottom-margin bad-translate text-color"><h3>НЕВЕРНО!!!!!!!!!
-                        </h3>
+                    <div *ngIf="undefined!==realtime_word">
+                        <div class="col-4 bottom-margin width-size height-text-size">{{realtime_word.word}}</div>
+                        <div class="col-4 bottom-margin width-size height-text-size">{{realtime_word.transcript}}</div>
+                        <div class="col-4 bottom-margin">
+                            <input type="text"
+                                   (keyup.enter)='compareWord(translate)' class="col-4 bottom-margin width-size text-color height-element-size" #translate>
+                        </div>
+                        <div class="col-4 bottom-margin">
+                            <button class="col-4 btn btn-dark btn-lg bottom-margin width-size height-element-size"
+                                    (click)="compareWord(translate)">Click here</button>
+                        </div>  
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-4 bottom-margin right-translate text-color">
-                        <h3>
-                            Правильный перевод: [{{realtime_word.translate[0]}},
-                            {{realtime_word.translate[1]}},
-                            {{realtime_word.translate[2]}}]
-                        </h3>
+                <div *ngIf="!right_translate && onswer_clicked">
+                    <div class="row justify-content-center">
+                        <div class="col-4 bottom-margin bad-translate text-color width-size">
+                            You are not right!<br>
+                            This translate is right:<br>
+                            <div class="right-translate" *ngFor="let transl of realtime_word.translate">{{transl}}</div>
+                            <br>You have time to learn this word: {{timer}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div *ngIf="!right_translate && onswer_clicked">
-                <div class="row justify-content-center">
-                    <button class="col-4 btn btn-primary btn-lg bottom-margin" (click)="createWord(); translate.value=''">Новое слово</button>
-                </div>    
-            </div>
-            <div *ngIf="right_translate && onswer_clicked">
-                <div class="row justify-content-center">
-                        <div class="col-4 bottom-margin right-translate text-color"><h3>Правильно!!! Молодец!!!)))) Next word!</h3></div>
+                <div *ngIf="right_translate && onswer_clicked">
+                    <div class="row justify-content-center">
+                        <div class="col-4 bottom-margin right-translate text-color width-size">
+                            Great! You are right! Next word! >>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <button class="col-4 btn btn-primary btn-lg bottom-margin" (click)="compareWord(translate.value)">Ввести ответ</button>
             </div>
         </div>
     </div>
-</div>
+</section>
