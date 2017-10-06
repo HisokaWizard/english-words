@@ -20,7 +20,7 @@ html, body {
   
   .bottom-margin{
     margin-bottom: 10px;
-    color: #DD6F46;
+    color: #AD502E;
   }
 
   .text-color{
@@ -37,14 +37,14 @@ html, body {
 
   .word-text{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-style: italic;
     font-weight: bold;
   }
 
   .width-size{
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 250px;
+    max-width: 250px;
   }
 
   .height-text-size{
@@ -52,6 +52,6 @@ html, body {
   }
 
   .height-element-size{
-    height: 45px;
+    height: 40px;
   }
-/*# sourceMappingURL=app.7ce38cb5e0b56f2e3085.css.map*/
+/*# sourceMappingURL=app.2d04e6dd86eaae0449ad.css.map*/

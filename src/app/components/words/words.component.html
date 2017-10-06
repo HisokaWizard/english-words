@@ -1,7 +1,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-12 word-text ground">
+            <div class="col-12 word-text">
                 <div class="row justify-content-center">
                     <div *ngIf="undefined!==realtime_word">
                         <div class="col-4 bottom-margin width-size height-text-size">{{realtime_word.word}}</div>
@@ -16,7 +16,12 @@
                         </div>  
                     </div>
                 </div>
-                <div *ngIf="!right_translate && onswer_clicked">
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size height-text-size">
+                        Translate: {{complete_word.length}}/{{words.length-1}}
+                    </div>
+                </div>
+                <div *ngIf="!right_translate && answer_clicked">
                     <div class="row justify-content-center">
                         <div class="col-4 bottom-margin bad-translate text-color width-size">
                             You are not right!<br>
@@ -26,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div *ngIf="right_translate && onswer_clicked">
+                <div *ngIf="right_translate && answer_clicked">
                     <div class="row justify-content-center">
                         <div class="col-4 bottom-margin right-translate text-color width-size">
                             Great! You are right! Next word! >>
