@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Word, Words } from './words.database';
+import { Word } from '../wordsdatabase/word';
+import { Words } from '../menu/menu.component';
 
 @Component({
   selector: 'words',

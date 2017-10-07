@@ -1,3 +1,4 @@
+import { MenuComponent } from './components/menu/menu.component';
 import { WordsComponent } from './components/words/words.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -5,8 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
     {
         path: '',
-        component: WordsComponent
+        component: MenuComponent
     },
+    {
+        path: 'words',
+        component: WordsComponent
+    }
 ];
 
 @NgModule({
