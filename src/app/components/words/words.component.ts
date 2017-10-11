@@ -10,7 +10,7 @@ import { Words } from '../menu/menu.component';
 })
 export class WordsComponent implements OnInit {
 
-  words: Word[] = Words;
+  words: Word[];
   realtime_word: Word = undefined;
   right_translate: boolean = false;
   answer_clicked: boolean = false;
@@ -20,7 +20,11 @@ export class WordsComponent implements OnInit {
   final_message: string;
 
   constructor(private router: Router) {
+    this.words = Words;
     this.complete_word = [];
+    if (0 === Words.length) {
+      this.router.navigate(['']);
+    }
   }
 
   createWord() {
@@ -99,6 +103,10 @@ export class WordsComponent implements OnInit {
       }
     }, 1000);
 
+  }
+
+  returnToStart() {
+    this.router.navigate(['']);
   }
 
   ngOnInit() {
