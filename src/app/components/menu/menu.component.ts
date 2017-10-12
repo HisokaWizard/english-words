@@ -4,6 +4,7 @@ import { Word } from '../wordsdatabase/word';
 import { WordsFirst } from '../wordsdatabase/words.first';
 import { WordsSecond } from '../wordsdatabase/words.second';
 import { WordsThird } from '../wordsdatabase/words.third';
+import { WordsFour } from '../wordsdatabase/words.four';
 
 export let Words: Word[] = [];
 
@@ -17,11 +18,13 @@ export class MenuComponent {
     wordsFirst: Word[];
     wordsSecond: Word[];
     wordsThird: Word[];
+    wordsFour: Word[];
 
     constructor(private router: Router) {
         this.wordsFirst = WordsFirst;
         this.wordsSecond = WordsSecond;
         this.wordsThird = WordsThird;
+        this.wordsFour = WordsFour;
     }
 
     goWithFisrtWords() {
@@ -36,6 +39,11 @@ export class MenuComponent {
 
     goWithThirdWords() {
         Words = this.wordsThird;
+        this.router.navigate(['/words']);
+    }
+
+    goWithFourWords() {
+        Words = this.wordsFour;
         this.router.navigate(['/words']);
     }
 }
