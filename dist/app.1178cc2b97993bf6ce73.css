@@ -48,10 +48,17 @@ html, body {
   }
 
   .height-text-size{
-    height: 30px;
+    height: 50px;
   }
 
   .height-element-size{
     height: 40px;
   }
-/*# sourceMappingURL=app.95a92a8b77c5ba12c7ff.css.map*/
+
+  .text-position{
+    color: #111122;
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+  }
+/*# sourceMappingURL=app.1178cc2b97993bf6ce73.css.map*/

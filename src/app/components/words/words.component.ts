@@ -14,7 +14,7 @@ export class WordsComponent implements OnInit {
   realtime_word: Word = undefined;
   right_translate: boolean = false;
   answer_clicked: boolean = false;
-  timer: number = 10;
+  timer: number = 0;
   complete_word: number[];
   real_index: number;
   final_message: string;
@@ -64,13 +64,15 @@ export class WordsComponent implements OnInit {
         setTimeout(() => {
           this.createWord();
           this.answer_clicked = false;
-        }, 2000);
+        }, 1000);
       } else {
-        this.timer = 10;
-        this.interval();
-        this.right_translate = false;
-        this.answer_clicked = true;
-        word.value = null;
+        if (0 === this.timer) {
+          this.timer = 5;
+          this.interval();
+          this.right_translate = false;
+          this.answer_clicked = true;
+          word.value = null;
+        }
       }
     }
   }

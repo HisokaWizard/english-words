@@ -4,8 +4,8 @@
             <div class="col-12 word-text">
                 <div class="row justify-content-center">
                     <div *ngIf="undefined!==realtime_word">
-                        <div class="col-4 bottom-margin width-size height-text-size">{{realtime_word.word}}</div>
-                        <div class="col-4 bottom-margin width-size height-text-size">{{realtime_word.transcript}}</div>
+                        <div class="col-4 bottom-margin width-size height-text-size text-position">{{realtime_word.word}}</div>
+                        <!-- <div class="col-4 bottom-margin width-size height-text-size">{{realtime_word.transcript}}</div> -->
                         <div class="col-4 bottom-margin">
                             <input type="text"
                                    (keyup.enter)='compareWord(translate)' class="col-4 bottom-margin width-size text-color height-element-size" #translate>

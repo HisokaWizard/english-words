@@ -3,31 +3,85 @@
         <div class="row">
             <div class="col-12">
                 <div class="row justify-content-center">
-                    <div class="col-4 bottom-margin width-size" [style.margin-top]="'10px'">
-                            <button class="btn btn-dark btn-lg width-size" 
-                                    title="Animals, Family, Salute, Proffessions, Home(flat)"
-                                    (click)="goWithFirstWords()">First Words</button>
+                    <div class="col-4 bottom-margin width-size" [style.margin-top]="'10px'" *ngIf="lang">
+                        <button class="btn btn-dark position-button" (click)="language()">
+                            <img src="../../../assets/images/rus.png" width="48" height="48">
+                        </button>
+                    </div>
+                    <div class="col-4 bottom-margin width-size" [style.margin-top]="'10px'" *ngIf="!lang">
+                        <button class="btn btn-dark position-button" (click)="language()">
+                            <img src="../../../assets/images/en.png" width="48" height="48">
+                        </button>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-4 bottom-margin width-size">
-                        <button class="btn btn-dark btn-lg width-size" 
-                                title="House, Builds, Furniture, Cutlery" 
-                                (click)="goWithSecondWords()">Second Words</button>
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToFamily()">{{realLang['family']}}</button>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-4 bottom-margin width-size">
-                        <button class="btn btn-dark btn-lg width-size" 
-                                title="Food, Day" 
-                                (click)="goWithThirdWords()">Third Words</button>
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToAnimals()">{{realLang['animals']}}</button>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-4 bottom-margin width-size">
-                        <button class="btn btn-dark btn-lg width-size" 
-                                title="Things, Year" 
-                                (click)="goWithFourWords()">Four Words</button>
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToFood()">{{realLang['food']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToThings()">{{realLang['things']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToProfession()">{{realLang['profession']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToFlat()">{{realLang['flat']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToFurniture()">{{realLang['furniture']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToYears()">{{realLang['years']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToCityPlaces()">{{realLang['cityplaces']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToKitchen()">{{realLang['kitchen']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToNamesPeople()">{{realLang['names_people']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToPlants()">{{realLang['plants']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToSalute()">{{realLang['salute']}}</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 bottom-margin width-size">
+                        <button class="btn btn-dark btn-lg width-size" (click)="goToTransport()">{{realLang['transport']}}</button>
                     </div>
                 </div>
             </div>
