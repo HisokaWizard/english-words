@@ -1,6 +1,6 @@
-import { Word } from './word';
+import { Word } from '../wordstruct/word';
 
-export const Profession: Word[] = [
+export const ProfessionRu: Word[] = [
     new Word(-100, '', '', ['', '', '', '', '', '', '', '', '', '']),
     new Word(44, 'job', '', ['работа', '', '', '', '', '', '', '', '', '']),
     new Word(45, 'bisinessman', '', ['бизнесмен', 'предприниматель', '', '', '', '', '', '', '', '']),

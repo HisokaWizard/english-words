@@ -1,6 +1,6 @@
-import { Word } from './word';
+import { Word } from '../wordstruct/word';
 
-export const Flat: Word[] = [
+export const FlatRu: Word[] = [
     new Word(-100, '', '', ['', '', '', '', '', '', '', '', '', '']),
     new Word(88, 'flat', '', ['квартира', '', '', '', '', '', '', '', '', '']),
     new Word(89, 'room', '', ['комната', '', '', '', '', '', '', '', '', '']),

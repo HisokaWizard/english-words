@@ -1,6 +1,6 @@
-import { Word } from './word';
+import { Word } from '../wordstruct/word';
 
-export const Transport: Word[] = [
+export const TransportEn: Word[] = [
     new Word(-100, '', '', ['', '', '', '', '', '', '', '', '', '']),
     new Word(193, 'transport', '', ['перевозить', 'транспортировать', 'транспорт', '', '', '', '', '', '', '']),
     new Word(194, 'plane', '', ['самолет', '', '', '', '', '', '', '', '', '']),

@@ -1,6 +1,6 @@
-import { Word } from './word';
+import { Word } from '../wordstruct/word';
 
-export const Salute: Word[] = [
+export const SaluteEn: Word[] = [
     new Word(-100, '', '', ['', '', '', '', '', '', '', '', '', '']),
     new Word(0, 'hi', '', ['привет', 'здравствуй', 'здорова', 'салют', 'йоу', 'хай', 'здравствуйте', '', '', '']),
     new Word(1, 'hello', '', ['здравствуйте', 'привет', '', '', '', '', '', '', '', '']),

@@ -1,6 +1,6 @@
-import { Word } from './word';
+import { Word } from '../wordstruct/word';
 
-export const Things: Word[] = [
+export const ThingsRu: Word[] = [
     new Word(-100, '', '', ['', '', '', '', '', '', '', '', '', '']),
     new Word(35, 'thing', '', ['вещь', '', '', '', '', '', '', '', '', '']),
     new Word(36, 'pen', '', ['ручка', '', '', '', '', '', '', '', '', '']),

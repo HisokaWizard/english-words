@@ -12,35 +12,34 @@
                         </div>
                         <div class="col-4 bottom-margin">
                             <button class="col-4 btn btn-dark btn-lg bottom-margin width-size height-element-size"
-                                    (click)="compareWord(translate)">Click here</button>
+                                    (click)="compareWord(translate)">{{reallang['click']}}</button>
                         </div>  
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-4 bottom-margin width-size height-text-size">
-                        Translate: {{complete_word.length}}/{{words.length-1}}
+                        {{reallang['translated']}}: {{complete_word.length}}/{{words.length-1}}
                     </div>
                 </div>
                 <div *ngIf="!right_translate && answer_clicked">
                     <div class="row justify-content-center">
                         <div class="col-4 bottom-margin bad-translate text-color width-size">
-                            You are not right!<br>
-                            This translate is right:<br>
+                            {{reallang['badly']}}
                             <div class="right-translate" *ngFor="let transl of realtime_word.translate">{{transl}}</div>
-                            <br>You have time to learn this word: {{timer}}
+                            <br>{{reallang['time']}} {{timer}}
                         </div>
                     </div>
                 </div>
                 <div *ngIf="right_translate && answer_clicked">
                     <div class="row justify-content-center">
                         <div class="col-4 bottom-margin right-translate text-color width-size">
-                            Great! You are right! Next word! >>
+                            {{reallang['right']}}
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <button class="btn btn-dark btn-lg col-4 btn btn-dark btn-lg bottom-margin width-size height-element-size"
-                            (click)="returnToStart()">Return to start</button>
+                            (click)="returnToStart()">{{reallang['start']}}</button>
                 </div>
             </div>
         </div>

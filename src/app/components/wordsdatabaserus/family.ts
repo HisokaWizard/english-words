@@ -1,6 +1,6 @@
-import { Word } from './word';
+import { Word } from '../wordstruct/word';
 
-export const Family: Word[] = [
+export const FamilyRu: Word[] = [
     new Word(-100, '', '', ['', '', '', '', '', '', '', '', '', '']),
     new Word(24, 'family', '', ['семья', '', '', '', '', '', '', '', '', '']),
     new Word(25, 'parents', '', ['родители', '', '', '', '', '', '', '', '', '']),

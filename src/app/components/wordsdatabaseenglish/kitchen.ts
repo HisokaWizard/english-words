@@ -1,6 +1,6 @@
-import { Word } from './word';
+import { Word } from '../wordstruct/word';
 
-export const Kitchen: Word[] = [
+export const KitchenEn: Word[] = [
     new Word(-100, '', '', ['', '', '', '', '', '', '', '', '', '']),
     new Word(111, 'city', '', ['город', '', '', '', '', '', '', '', '', '']),
     new Word(112, 'house', '', ['здание', 'дом', '', '', '', '', '', '', '', '']),
