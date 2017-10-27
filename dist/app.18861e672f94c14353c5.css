@@ -3,10 +3,11 @@ html, body {
     padding: 0;
     height: 100%;
   
-    background: url(../images/background.jpg) no-repeat center fixed;
+    background: url(/assets/background.a4f661b81b82a321b3051585ba69f3b2.jpg) no-repeat center fixed;
     -webkit-background-size: cover;
     background-size: cover; 
     background-attachment: fixed;
     background-position: center center;
     background-color:rgb(70, 70, 70);
   }
+/*# sourceMappingURL=app.18861e672f94c14353c5.css.map*/

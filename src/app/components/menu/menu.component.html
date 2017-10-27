@@ -2,22 +2,20 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="row justify-content-center">
-                    <div class="col-4 bottom-margin width-size" [style.margin-top]="'10px'" *ngIf="!lang">
-                        <button class="btn btn-dark position-button" (click)="language()">
-                            <img src="../../../assets/images/en.png" width="48" height="48">
+                <div class="row justify-content-end">
+                    <div class="col-1" [style.margin]="'10px'" *ngIf="!lang">
+                        <button class="btn btn-outline-dark" (click)="language()">
+                            <img src="../../../assets/images/en.png" width="32" height="32">
                         </button>
                     </div>
-                    <div class="col-4 bottom-margin width-size" [style.margin-top]="'10px'" *ngIf="lang">
-                        <button class="btn btn-dark position-button" (click)="language()">
-                            <img src="../../../assets/images/rus.png" width="48" height="48">
+                    <div class="col-1" [style.margin]="'10px'" *ngIf="lang">
+                        <button class="btn btn-outline-dark" (click)="language()">
+                            <img src="../../../assets/images/rus.png" width="32" height="32">
                         </button>
                     </div>
                 </div>
-                <div class="row justify-content-center" *ngFor="let category of allcategory">
-                    <div class="col-4 bottom-margin width-size">
-                        <button class="btn btn-dark btn-lg width-size" (click)="goToTranslate(category)">{{category.name}}</button>
-                    </div>
+                <div *ngFor="let category of allcategory">
+                    <button class="btn btn-dark button-container" (click)="goToTranslate(category)">{{category.name}}</button>
                 </div>
             </div>
         </div>

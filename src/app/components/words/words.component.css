@@ -1,0 +1,32 @@
+.right-translate{
+    background-color: rgba(21, 112, 21, 0.5);
+}
+
+.bad-translate{
+    background-color: rgba(150, 52, 52, 0.5);
+}
+
+.word-font {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(23, 15, 48);
+    font-size: 35px;
+    margin: 10px 10px 0 10px;
+    text-align: center;
+}
+
+.input-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.element-gabarite{
+    width: 250px;
+    margin: 10px 10px 0 10px;
+}
+
+.all-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    color: rgba(190, 105, 74, 0.76);
+    font-size: 25px;
+}
