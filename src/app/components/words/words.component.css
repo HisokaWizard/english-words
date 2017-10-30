@@ -1,8 +1,10 @@
 .right-translate{
+    padding: 2px;
     background-color: rgba(21, 112, 21, 0.5);
 }
 
 .bad-translate{
+    padding: 2px;
     background-color: rgba(150, 52, 52, 0.5);
 }
 
@@ -11,7 +13,7 @@
     color: rgb(23, 15, 48);
     font-size: 35px;
     margin: 10px 10px 0 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .input-text {
@@ -21,7 +23,8 @@
 }
 
 .element-gabarite{
-    width: 250px;
+    min-width: 250px;
+    max-width: 300px;
     margin: 10px 10px 0 10px;
 }
 

@@ -2,43 +2,34 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="row justify-content-center">
-                    <div *ngIf="undefined!==realtime_word">
-                        <div class="col-12 word-font">{{realtime_word.word}}</div>
-                        <div class="col-12">
-                            <input type="text" class="col-12 element-gabarite input-text"
-                             (keyup.enter)='compareWord(translate)' #translate>
-                        </div>
-                        <div class="col-12 element-gabarite">
-                            <button class="col-12 btn btn-dark all-text" (click)="compareWord(translate)">{{reallang['click']}}</button>
-                        </div>
+                <div *ngIf="undefined!==realtime_word">
+                    <div class="col-6 word-font">{{realtime_word.word}}</div>
+                    <div class="col-6">
+                        <input type="text" class="element-gabarite input-text" (keyup.enter)='compareWord(translate)' #translate>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-dark all-text element-gabarite" (click)="compareWord(translate)">{{reallang['click']}}</button>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-6 element-gabarite all-text">
-                        {{reallang['translated']}}{{complete_word.length}}/{{words.length-1}}
+                <div class="col-6 element-gabarite all-text">
+                    {{reallang['translated']}} {{complete_word.length}}/{{words.length-1}}
+                </div>
+                <div class="col-6 element-gabarite input-text" 
+                    *ngIf="!right_translate && answer_clicked">
+                    <div class="bad-translate">
+                        {{reallang['badly']}}
+                        <div class="right-translate" *ngFor="let transl of realtime_word.translate">{{transl}}</div>
+                        {{reallang['time']}} {{timer}}
                     </div>
                 </div>
-                <div *ngIf="!right_translate && answer_clicked">
-                    <div class="row justify-content-center">
-                        <div class="col-6 bad-translate element-gabarite input-text">
-                            {{reallang['badly']}}
-                            <div class="right-translate" *ngFor="let transl of realtime_word.translate">{{transl}}</div>
-                            <br>{{reallang['time']}} {{timer}}
-                        </div>
+                <div class="col-6 element-gabarite input-text"
+                    *ngIf="right_translate && answer_clicked">
+                    <div class="right-translate">
+                        {{reallang['right']}}
                     </div>
                 </div>
-                <div *ngIf="right_translate && answer_clicked">
-                    <div class="row justify-content-center">
-                        <div class="col-6 element-gabarite right-translate input-text">
-                            {{reallang['right']}}
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-6 element-gabarite">
-                        <button class="btn btn-dark all-text" (click)="returnToStart()">{{reallang['start']}}</button>
-                    </div>
+                <div class="col-6">
+                    <button class="btn btn-dark all-text element-gabarite" (click)="returnToStart()">{{reallang['start']}}</button>
                 </div>
             </div>
         </div>

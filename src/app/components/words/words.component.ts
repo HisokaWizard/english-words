@@ -92,7 +92,7 @@ export class WordsComponent implements OnInit {
         }, 1000);
       } else {
         if (0 === this.timer) {
-          this.timer = 5;
+          this.timer = 7;
           this.interval();
           this.right_translate = false;
           this.answer_clicked = true;

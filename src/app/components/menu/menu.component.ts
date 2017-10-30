@@ -17,6 +17,8 @@ import { Names_PeopleEn } from '../wordsdatabaseenglish/names_people';
 import { PlantsEn } from '../wordsdatabaseenglish/plants';
 import { SaluteEn } from '../wordsdatabaseenglish/salute';
 import { TransportEn } from '../wordsdatabaseenglish/transport';
+import { HeathAndBodyEn } from '../wordsdatabaseenglish/healt&body';
+import { ClothesEn } from '../wordsdatabaseenglish/clothes';
 
 // Russian
 import { FamilyRu } from '../wordsdatabaserus/family';
@@ -33,6 +35,8 @@ import { Names_PeopleRu } from '../wordsdatabaserus/names_people';
 import { PlantsRu } from '../wordsdatabaserus/plants';
 import { SaluteRu } from '../wordsdatabaserus/salute';
 import { TransportRu } from '../wordsdatabaserus/transport';
+import { HeathAndBodyRu } from '../wordsdatabaserus/healt&body';
+import { ClothesRu } from '../wordsdatabaserus/clothes';
 
 export let Words: Word[] = [];
 export let Language = false;
@@ -66,6 +70,8 @@ export class MenuComponent implements OnInit {
     plants: Word[];
     salute: Word[];
     transport: Word[];
+    healthandbody: Word[];
+    clothes: Word[];
 
     constructor(private router: Router) {
     }
@@ -87,6 +93,8 @@ export class MenuComponent implements OnInit {
             this.dataobject.push({id: 'plants', data: this.plants = PlantsEn});
             this.dataobject.push({id: 'salute', data: this.salute = SaluteEn});
             this.dataobject.push({id: 'transport', data: this.transport = TransportEn});
+            this.dataobject.push({id: 'healthandbody', data: this.healthandbody = HeathAndBodyEn});
+            this.dataobject.push({id: 'clothes', data: this.clothes = ClothesEn});
         } else {
             this.dataobject.push({id: 'family', data: this.family = FamilyRu});
             this.dataobject.push({id: 'animals', data: this.animals = AnimalsRu});
@@ -102,6 +110,8 @@ export class MenuComponent implements OnInit {
             this.dataobject.push({id: 'plants', data: this.plants = PlantsRu});
             this.dataobject.push({id: 'salute', data: this.salute = SaluteRu});
             this.dataobject.push({id: 'transport', data: this.transport = TransportRu});
+            this.dataobject.push({id: 'healthandbody', data: this.healthandbody = HeathAndBodyRu});
+            this.dataobject.push({id: 'clothes', data: this.clothes = ClothesRu});
         }
     }
 
@@ -120,6 +130,8 @@ export class MenuComponent implements OnInit {
         this.allcategory.push({id: 'plants', name: this.realLang['plants'], data: this.plants});
         this.allcategory.push({id: 'salute', name: this.realLang['salute'], data: this.salute});
         this.allcategory.push({id: 'transport', name: this.realLang['transport'], data: this.transport});
+        this.allcategory.push({id: 'healthandbody', name: this.realLang['healthandbody'], data: this.healthandbody});
+        this.allcategory.push({id: 'clothes', name: this.realLang['clothes'], data: this.clothes});
     }
 
     RusCreate() {
@@ -137,6 +149,8 @@ export class MenuComponent implements OnInit {
         this.Rus['plants'] = 'Растения';
         this.Rus['salute'] = 'Приветсвия';
         this.Rus['transport'] = 'Транспорт';
+        this.Rus['healthandbody'] = 'Здоровье и тело';
+        this.Rus['clothes'] = 'Одежда';
     }
 
     EnCreate () {
@@ -154,6 +168,8 @@ export class MenuComponent implements OnInit {
         this.En['plants'] = 'Plants';
         this.En['salute'] = 'Salute';
         this.En['transport'] = 'Transport';
+        this.En['healthandbody'] = 'Health & Body';
+        this.En['clothes'] = 'Clothes';
     }
 
     language() {
