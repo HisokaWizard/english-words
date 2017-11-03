@@ -19,6 +19,11 @@ import { SaluteEn } from '../wordsdatabaseenglish/salute';
 import { TransportEn } from '../wordsdatabaseenglish/transport';
 import { HeathAndBodyEn } from '../wordsdatabaseenglish/healt&body';
 import { ClothesEn } from '../wordsdatabaseenglish/clothes';
+import { EventsEn } from '../wordsdatabaseenglish/events';
+import { WeatherEn } from '../wordsdatabaseenglish/weather';
+import { ArtEn } from '../wordsdatabaseenglish/art';
+import { MeasureEn } from '../wordsdatabaseenglish/measure';
+import { FeelingEn } from '../wordsdatabaseenglish/feeling';
 
 // Russian
 import { FamilyRu } from '../wordsdatabaserus/family';
@@ -37,6 +42,11 @@ import { SaluteRu } from '../wordsdatabaserus/salute';
 import { TransportRu } from '../wordsdatabaserus/transport';
 import { HeathAndBodyRu } from '../wordsdatabaserus/healt&body';
 import { ClothesRu } from '../wordsdatabaserus/clothes';
+import { EventsRu } from '../wordsdatabaserus/events';
+import { WeatherRu } from '../wordsdatabaserus/weather';
+import { ArtRu } from '../wordsdatabaserus/art';
+import { MeasureRu } from '../wordsdatabaserus/measure';
+import { FeelingRu } from '../wordsdatabaserus/feeling';
 
 export let Words: Word[] = [];
 export let Language = false;
@@ -72,6 +82,11 @@ export class MenuComponent implements OnInit {
     transport: Word[];
     healthandbody: Word[];
     clothes: Word[];
+    events: Word[];
+    weather: Word[];
+    art: Word[];
+    measure: Word[];
+    feeling: Word[];
 
     constructor(private router: Router) {
     }
@@ -95,6 +110,11 @@ export class MenuComponent implements OnInit {
             this.dataobject.push({id: 'transport', data: this.transport = TransportEn});
             this.dataobject.push({id: 'healthandbody', data: this.healthandbody = HeathAndBodyEn});
             this.dataobject.push({id: 'clothes', data: this.clothes = ClothesEn});
+            this.dataobject.push({id: 'events', data: this.events = EventsEn});
+            this.dataobject.push({id: 'weather', data: this.events = WeatherEn});
+            this.dataobject.push({id: 'art', data: this.events = ArtEn});
+            this.dataobject.push({id: 'measure', data: this.events = MeasureEn});
+            this.dataobject.push({id: 'feeling', data: this.events = FeelingEn});
         } else {
             this.dataobject.push({id: 'family', data: this.family = FamilyRu});
             this.dataobject.push({id: 'animals', data: this.animals = AnimalsRu});
@@ -112,6 +132,11 @@ export class MenuComponent implements OnInit {
             this.dataobject.push({id: 'transport', data: this.transport = TransportRu});
             this.dataobject.push({id: 'healthandbody', data: this.healthandbody = HeathAndBodyRu});
             this.dataobject.push({id: 'clothes', data: this.clothes = ClothesRu});
+            this.dataobject.push({id: 'events', data: this.events = EventsRu});
+            this.dataobject.push({id: 'weather', data: this.events = WeatherRu});
+            this.dataobject.push({id: 'art', data: this.events = ArtRu});
+            this.dataobject.push({id: 'measure', data: this.events = MeasureRu});
+            this.dataobject.push({id: 'feeling', data: this.events = FeelingRu});
         }
     }
 
@@ -132,6 +157,11 @@ export class MenuComponent implements OnInit {
         this.allcategory.push({id: 'transport', name: this.realLang['transport'], data: this.transport});
         this.allcategory.push({id: 'healthandbody', name: this.realLang['healthandbody'], data: this.healthandbody});
         this.allcategory.push({id: 'clothes', name: this.realLang['clothes'], data: this.clothes});
+        this.allcategory.push({id: 'events', name: this.realLang['events'], data: this.events});
+        this.allcategory.push({id: 'weather', name: this.realLang['weather'], data: this.weather});
+        this.allcategory.push({id: 'art', name: this.realLang['art'], data: this.art});
+        this.allcategory.push({id: 'measure', name: this.realLang['measure'], data: this.measure});
+        this.allcategory.push({id: 'feeling', name: this.realLang['feeling'], data: this.feeling});
     }
 
     RusCreate() {
@@ -151,6 +181,11 @@ export class MenuComponent implements OnInit {
         this.Rus['transport'] = 'Транспорт';
         this.Rus['healthandbody'] = 'Здоровье и тело';
         this.Rus['clothes'] = 'Одежда';
+        this.Rus['events'] = 'События';
+        this.Rus['weather'] = 'Погода';
+        this.Rus['art'] = 'Хобби и исскуство';
+        this.Rus['measure'] = 'Меры и финансы';
+        this.Rus['feeling'] = 'Чувства';
     }
 
     EnCreate () {
@@ -170,6 +205,11 @@ export class MenuComponent implements OnInit {
         this.En['transport'] = 'Transport';
         this.En['healthandbody'] = 'Health & Body';
         this.En['clothes'] = 'Clothes';
+        this.En['events'] = 'Events';
+        this.En['weather'] = 'Weather';
+        this.En['art'] = 'Hobby/Art';
+        this.En['measure'] = 'Measure';
+        this.En['feeling'] = 'Feeling';
     }
 
     language() {
