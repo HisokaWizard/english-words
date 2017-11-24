@@ -25,6 +25,7 @@ import { ArtEn } from '../wordsdatabaseenglish/art';
 import { MeasureEn } from '../wordsdatabaseenglish/measure';
 import { FeelingEn } from '../wordsdatabaseenglish/feeling';
 import { PretextEn } from '../wordsdatabaseenglish/pretext';
+import { AdjectiveEn } from '../wordsdatabaseenglish/adjective';
 
 // Russian
 import { FamilyRu } from '../wordsdatabaserus/family';
@@ -49,6 +50,7 @@ import { ArtRu } from '../wordsdatabaserus/art';
 import { MeasureRu } from '../wordsdatabaserus/measure';
 import { FeelingRu } from '../wordsdatabaserus/feeling';
 import { PretextRu } from '../wordsdatabaserus/pretext';
+import { AdjectiveRu } from '../wordsdatabaserus/adjective';
 
 export let Words: Word[] = [];
 export let Language = false;
@@ -90,6 +92,7 @@ export class MenuComponent implements OnInit {
     measure: Word[];
     feeling: Word[];
     pretext: Word[];
+    adjective: Word[];
 
     constructor(private router: Router) {
     }
@@ -119,6 +122,7 @@ export class MenuComponent implements OnInit {
             this.dataobject.push({id: 'measure', data: this.measure = MeasureEn});
             this.dataobject.push({id: 'feeling', data: this.feeling = FeelingEn});
             this.dataobject.push({id: 'pretext', data: this.pretext = PretextEn});
+            this.dataobject.push({id: 'adjective', data: this.pretext = AdjectiveEn});
         } else {
             this.dataobject.push({id: 'family', data: this.family = FamilyRu});
             this.dataobject.push({id: 'animals', data: this.animals = AnimalsRu});
@@ -142,6 +146,7 @@ export class MenuComponent implements OnInit {
             this.dataobject.push({id: 'measure', data: this.measure = MeasureRu});
             this.dataobject.push({id: 'feeling', data: this.feeling = FeelingRu});
             this.dataobject.push({id: 'pretext', data: this.pretext = PretextRu});
+            this.dataobject.push({id: 'adjective', data: this.pretext = AdjectiveRu});
         }
     }
 
@@ -168,6 +173,7 @@ export class MenuComponent implements OnInit {
         this.allcategory.push({id: 'measure', name: this.realLang['measure'], data: this.measure});
         this.allcategory.push({id: 'feeling', name: this.realLang['feeling'], data: this.feeling});
         this.allcategory.push({id: 'pretext', name: this.realLang['pretext'], data: this.pretext});
+        this.allcategory.push({id: 'adjective', name: this.realLang['adjective'], data: this.adjective});
     }
 
     RusCreate() {
@@ -193,6 +199,7 @@ export class MenuComponent implements OnInit {
         this.Rus['measure'] = 'Меры и финансы';
         this.Rus['feeling'] = 'Чувства/Действия';
         this.Rus['pretext'] = 'Местоимения/Предлоги';
+        this.Rus['adjective'] = 'Прилагательные';
     }
 
     EnCreate () {
@@ -218,6 +225,7 @@ export class MenuComponent implements OnInit {
         this.En['measure'] = 'Measure';
         this.En['feeling'] = 'Feeling/Action';
         this.En['pretext'] = 'Pronouns/Pretexts';
+        this.En['adjective'] = 'Adjectives';
     }
 
     language() {
