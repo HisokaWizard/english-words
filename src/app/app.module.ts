@@ -8,10 +8,13 @@ import { AppRoutingModule } from './app-routing.modules';
 
 import { AppComponent } from './app.component';
 
+import { OrderModule } from 'ngx-order-pipe';
+
 @NgModule({
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OrderModule
   ],
   declarations: [
     AppComponent,

@@ -14,7 +14,7 @@
                         </button>
                     </div>
                 </div>
-                <div *ngFor="let category of allcategory">
+                <div *ngFor="let category of allcategory | orderBy: order">
                     <button class="btn btn-dark button-container" (click)="goToTranslate(category)">{{category.name}}</button>
                 </div>
             </div>
